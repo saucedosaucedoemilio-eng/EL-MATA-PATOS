@@ -1,32 +1,55 @@
-body{
-    background-image: url("../img/duckhunt-bg-4k.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    cursor: url(../img/target.png), auto;
-}
-@font-face {
-font-family: gameFont;
-src: url("../img/game-font.otf")
-}
-#score{
-    font-size: 30px;
-    font-family: gameFont;
-    color: white;
-
-}
-#patito1{    
-  position: absolute;  
-  width: 100px;
-  left: 50px;
-}
-#patito2 {
-    position: absolute;
-  width: 100px;
-  right: 100px;    
-}
 body {
+  background-image: url("../img/duckhunt-bg-4k.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: url(../img/target.png), auto;
   margin: 0;
   overflow: hidden;
+}
+
+@font-face {
+  font-family: gameFont;
+  src: url("../img/game-font.otf")
+}
+
+#score {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 30px;
+  font-family: gameFont;
+  color: white;
+}
+
+#timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  font-family: gameFont;
+  color: white;
+}
+
+.pato {
+  position: absolute;
+  width: 100px;
+}
+
+#gameover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-family: gameFont;
+  color: red;
+  display: none;
+  text-shadow: 2px 2px 5px black;
+}
+
+#puntajeFinal {
+  display: none;
+  text-align: center;
 }
