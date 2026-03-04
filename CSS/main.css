@@ -1,0 +1,32 @@
+body{
+    background-image: url("../img/duckhunt-bg-4k.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    cursor: url(../img/target.png), auto;
+}
+@font-face {
+font-family: gameFont;
+src: url("../img/game-font.otf")
+}
+#score{
+    font-size: 30px;
+    font-family: gameFont;
+    color: white;
+
+}
+#patito1{    
+  position: absolute;  
+  width: 100px;
+  left: 50px;
+}
+#patito2 {
+    position: absolute;
+  width: 100px;
+  right: 100px;    
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
