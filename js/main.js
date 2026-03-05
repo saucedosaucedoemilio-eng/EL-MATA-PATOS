@@ -6,8 +6,8 @@ const gameoverElemento = document.getElementById("gameover");
 const puntajeFinal = document.getElementById("puntajeFinal");
 
 let puntos = 0;
-let tiempo = 25;
-
+let tiempo = 20;
+const duckShot = new Audio("./img/duck-shot.mp3");
 
 function moverAleatorio(elemento) {
   let anchoPantalla = window.innerWidth - 100;
@@ -33,13 +33,16 @@ const movimientoIntervalo = setInterval(() => {
 patos.forEach(pato => {
   pato.addEventListener("click", () => {
     if (pato.style.display !== "none") {
+
+      duckShot.currentTime = 0;
+      duckShot.play();
+
       pato.style.display = "none";
       puntos++;
       scoreElemento.textContent = puntos;
     }
   });
 });
-
 
 const contador = setInterval(() => {
   tiempo--;
